@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--auther:wang Shijia-->
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--13 More group events -->
+<style>
+    .groupevent{ 
+        width:100%;
+        height:350px;  
+        position: relative;
+    }
+
+#chatbox2 {
+    visibility: hidden ;
+}
+</style>
+<div class="item" >
+    <div class="item active" >
+        <div class='groupevent'>
+                    <img  class='groupevent' src="./img/events/group/group1.png"  alt="dummy">
+                        <button  style="bottom:9%;right:8%; padding: 10px; background-color:#fff; position: absolute; font-size: 14px" class="btn groupeventbutton" > <b>Join us</b> </button>
+        </div>
+        <div class='groupevent'>
+                    <img class='groupevent' src="./img/events/group/group2.png"  alt="dummy">
+                        <button style="bottom:8%;left:9%;padding: 10px; background-color:#fff; position: absolute; font-size: 14px" class="btn groupeventbutton"  > <b>Join us</b> </button>
+        </div>
+        <div class='groupevent'>
+                    <img class='groupevent' src="./img/events/group/group3.png"  alt="dummy">
+                        <button  style="bottom:14%; right:8%; padding: 10px; background-color:#fff; position: absolute;font-size: 14px" class="btn groupeventbutton"  > <b>Join us</b> </button>
+        </div>
+        <div class='groupevent'>
+                    <img class='groupevent' src="./img/events/group/group4.png"  alt="dummy">
+                <button style="bottom:10%;left:17%; padding: 10px; background-color:#fff; position: absolute;font-size: 14px" class="groupeventbutton btn"  > <b>Join us</b> </button>
+        </div>
+    </div>
+</div>
+
+<div id="chatbox2" style="height: 400px; width: 300px; background-color: #ccc; color: #000; bottom: 0px; right: 0px; position: fixed; ">
+    <button style="background-color: #ccc;" id='close2'> x </button>
+    <div style="height: 200px; width: 250; margin: 25px; padding: 20px; background-color: #fff; overflow: scroll">
+        <p style="color: blue" id="youMessage2"><b>You:</b></p>
+    </div>
+    <input id="inputbox" style="height: 50px; width: 250; margin: 25px; background-color: #fff"></input>
+    <button  class="btn" id="send2" style="background-color: #00CCA3; color: #fff"> Send </button>
+</div>
+
+
+<script>
+
+$('.groupeventbutton').click(function(e) {
+    $('#chatbox2').css("visibility", "visible");
+});
+                       
+$('#close2').click(function(e) {
+    $('#chatbox2').css('visibility', 'hidden');
+});
+                                         
+$('#send2').click(function(e) {
+    var message = $( "#inputbox2" ).val();
+    var old = document.getElementById("youMessage2").innerHTML;
+    document.getElementById("youMessage2").innerHTML = old +" <br> &nbsp; &nbsp;"+ message;
+});
+</script>

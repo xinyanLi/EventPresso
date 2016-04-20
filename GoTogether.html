@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--auther:wang Shijia & Li Xinyan-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css' >
+        
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+
+  <style>
+    body {
+    	font-family: 'Alef', sans-serif;
+    	font-size: 15px;
+    	color: #000000;
+      background-color: #FFFFFF;
+	}
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+        height: 350px;
+        min-height: 45%;
+        max-height: 45%;
+        margin: 3px;
+        padding: 3px;
+  }
+    .groupevent{ 
+        width:100%;
+        height:350px;  
+        position: relative;
+    }
+    #groupeventbutton{
+            position: absolute;
+
+        background-color: #fff;
+        font-weight: bold;
+        font-size: 11px;
+        }
+    .chat{  
+        height: 300px;
+        margin: 10px 30px 30px 20px;
+          background-color:#FFF;
+        padding:20px;
+        box-shadow: 0 0 10px #000000;
+         /* position: relative;*/
+      }
+  
+  
+  @media screen and (min-width: 700px) {
+      .chat {
+        min-width: 300px;
+        width: 300px;
+      }
+  }
+  
+  .chattitle{
+          font-size: 15px;
+          font-weight: bold;
+          text-align:center;
+          top:0;
+          right:50%;
+      }
+      .chatcontent{
+          font-size: 15px;
+          font-weight: normal;
+          font-style: italic;
+          position: absolute;
+          top:40%;
+          /*bottom: 10%;*/
+          right: 20%;
+          left:20%
+      }
+      .chatprofile{
+          position: absolute;
+          bottom: 5%;
+          left: 10%;
+          display: inline-block;
+          width: 30%;
+          max-width:100px; 
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+              
+      }
+      .chatbutton{
+          position: absolute;
+          width: 40%;
+          height: 10%;
+          bottom:10%;
+          right: 10%;
+          color: #fff;
+          background-color: #00CCA3;
+          font-weight: bolder;          
+      }
+      
+      .facebook {
+      position: absolute;
+      bottom:25%;
+      right: 10%;
+      color: grey;
+      }
+      
+      p.status {
+        color: grey;
+        font-weight: 1px;
+        margin: 10px;
+      }
+      
+      #chatbox {
+      visibility: hidden;
+      border-radius: 10px;
+      }
+      
+      .my-chat-message {
+      max-width: 150px;
+      margin: 5px;
+      padding: 10px;
+      float: right;
+      background: #00CCA3;
+      color: white;
+      border-radius: 10px;
+      }
+      
+      .others-chat-message {
+      max-width: 150px;
+      margin: 5px;
+      padding: 10px;
+      float: left;
+      background: #0099A3;
+      color: white;
+      border-radius: 10px;
+      }
+
+  </style>
+<div class="item active">
+    <div class="container" style="width:100%">
+  
+  <div id="myCarousel" class="carousel slide" style="position: relative" data-ride="carousel">
+    <!-- Indicators -->
+      
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+      
+      <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        
+                    <img  class='groupevent' src="./img/events/group/group2.png"  alt="dummy">
+        </div>
+        <div class="item">
+                    <img class='groupevent' src="./img/events/group/group1.png"  alt="dummy">
+        </div>
+        <div class="item">
+                    <img class='groupevent' src="./img/events/group/group3.png"  alt="dummy">
+        </div>
+        <div class="item">
+                    <img class='groupevent' src="./img/events/group/group4.png"  alt="dummy">
+        
+    </div>
+    </div>
+      <button id="moregroupeventbutton" style="position :absolute; bottom:20%;right:42%;background-color: #fff;
+    font-weight: bold;
+    font-size: 20px;" class="btn "data-slide-to="6" href="#" onclick="load_moregroupevent()" > All Group Events </button>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="item active" style="background-color: #fff; padding-top: 50px; text-align: center ">
+               
+               <div class=" chat col-sm-12 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">GOT7 Concert<br>
+                        2016 March 23<br>
+                        <p class="status"> Bought Ticket </p>
+                    </p>
+                    <p class="chatcontent">
+                        “Come and join me ”
+                    </p>
+                    <img class="chatprofile" src="img/profile/person2.png" >
+                    <div class="facebook"><img  src="images/logos/facebook.png" width=20px> facebook friend</div>
+                    <button  class="chatbutton btn" > chat </button>
+                </div>
+                <div class="chat col-sm-12 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">ONE OK ROCK Singapore Concert<br>
+                        
+                        2016 April 13<br>
+                        <p class="status">Haven’t bought tickets</p>
+                    </p>
+                    <p class="chatcontent">
+                        “ONE OK ROCK is really a good band and I wish to find a friend like you!”
+
+                    </p>
+                    <img class="chatprofile" src="img/profile/person3.png">
+                    <button  class="chatbutton btn" > chat </button>
+                </div>
+                <div class="chat col-sm-12 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">
+                        Gong Lin Na Concert<br>
+2016 Feburary 2<br>
+<p class="status">Haven’t bought tickets</p>
+
+
+
+                    </p>
+                    <p class="chatcontent">
+                        “Anybody wants to watch with me? ”
+                    </p>
+                    <img class="chatprofile" src="img/profile/person4.png">
+                    <button  class="chatbutton btn" > chat </button>
+                </div>
+                <div class="chat col-sm-5 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">
+                        Singapore Pranakan Museum<br>
+2016 June 11 ~ June23
+<p class="status">Free Admission</p>
+
+
+                    </p>
+                    <p class="chatcontent">
+                        “The museum is really nice!
+                    </p>
+                    <img class="chatprofile" src="img/profile/profile1.jpg">
+                    <div class="facebook"><img  src="images/logos/facebook.png" width=20px> facebook friend</div>
+                    <button  class="chatbutton btn" > chat </button>
+                </div>
+                <div class="chat col-sm-5 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">
+                        Singapore museum <br>
+2016 March ~ April
+<p class="status">Free Admission</p>
+
+
+
+                    </p>
+                    <p class="chatcontent">
+                        “Find me and I wish to make some new friends!”
+                    </p>
+                    <img class="chatprofile" src="img/profile/profile5.jpg">
+                    <div class="facebook"><img  src="images/logos/facebook.png" width=20px> facebook friend</div>
+                    <button  class="chatbutton btn" > chat </button>
+                        </div>
+                <div class="chat col-sm-5 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">
+                        Japanese comics show<br>
+2016 Feburary 2<br>
+<p class="status">Haven’t bought tickets</p>
+
+
+
+                    </p>
+                    <img class="chatprofile" src="img/profile/profile6.jpg">
+                    <button  class="chatbutton btn" > chat </button>
+                    <p class="chatcontent">
+                        “Anybody wants to watch with me? ”
+                    </p>
+                        </div>
+                <div class="chat col-sm-5 col-md-5 col-lg-4" style="text-align: center ">
+                    <p class="chattitle">
+                        Fomula 1 Singapore<br>
+2016 March 23<br>
+<p class="status">Bought Ticket</p>
+
+
+                    </p>
+                    <p class="chatcontent">
+                        “Come and join me ”
+                    </p>
+                    <img class="chatprofile" src="img/profile/profile7.jpg">
+                    <button  class="chatbutton btn" > chat </button>
+                        </div>
+                <div class="chat col-sm-5 col-md-5 col-lg-4">
+                    <p class="chattitle">
+                        Singapore Light Show<br>
+2016 April 13<br>
+<p class="status">Haven’t bought tickets</p>
+
+
+
+                    </p>
+                    <p class="chatcontent">
+                        “The light show is really nice!”
+                    </p>
+                    <img class="chatprofile" src="img/profile/person2.png">
+                    <div class="facebook"><img  src="images/logos/facebook.png" width=20px> facebook friend</div>
+                    <button  class="chatbutton btn" > chat </button>
+                        </div>
+                
+                
+                <div class="chat col-sm-5 col-md-5 col-lg-4">
+                    <p class="chattitle">
+                        Universal Studio Special Show<br>
+2016 June 11<br>
+<p class="status">Free Admission</p>
+
+
+                    </p>
+                    
+                    <p class="chatcontent">
+                        “The performance must be good and I need a new friend to go with me~
+
+                    </p>
+                    <img class="chatprofile" src="img/profile/person1.png">
+                    <button  class="chatbutton btn" > chat </button>
+                        </div>
+            </div>
+
+
+<div id="chatbox" style="height: 400px; width: 300px; background-color: #A4A4A4; color: #000; bottom: 20px; right: 20px; position: fixed; ">
+<button style="width: 30px; height: 30px; background-color: #ccc; border-radius: 10px;" id='close'> x </button>
+<div id="chatbox-profile" style="color:white;">
+<img src="images/logos/person2.png" style="width:20%; margin-left: 20px;"> You are chatting with Mary.
+</div>
+<div id="chat-message-container" style="height: 220px; width: 250; margin: 20px; margin-top: 10px; padding: 20px; background-color: #fff; overflow-y: scroll">
+</div>
+<input id="inputbox" style=" width: 190px; margin-left: 25px; background-color: #fff"></input>
+<button class="btn" id="send" style="background-color: #00CCA3; color: #fff; border-radius: 5px;"> Send </button>
+</div>
+
+
+<script>
+    function load_moregroupevent(){
+          parent.document.getElementById("Gotogother").innerHTML='<object width=100% height=100% type="text/html" data="./GroupEvents.html" ></object>';
+      }
+
+$('.chatbutton').click(function(e) {
+            $('#chatbox').css("visibility", "visible");
+    });
+    
+    $('#close').click(function(e) {
+                           $('#chatbox').css('visibility', 'hidden');
+                           });
+                           
+                           $('#send').click(function (e) {
+                           var message = $("#inputbox").val();
+                           if (message != '') {
+                           $("#inputbox").val("");
+                           var oldContent = document.getElementById("chat-message-container").innerHTML;
+                           document.getElementById("chat-message-container").innerHTML = oldContent + "<div class=my-chat-message>" + "Anna: " + message + "</div>";
+                           
+                           setTimeout(function () {
+                           oldContent = document.getElementById("chat-message-container").innerHTML;
+                           document.getElementById("chat-message-container").innerHTML = oldContent + "<div class=others-chat-message>" + "Mary: Sure! Let's meet an hour before the concert starts!" + "</div>"
+                           }, 3000);
+                           }
+                           });
+</script>
+
